@@ -1,12 +1,16 @@
 {
   "name": "gulpjs-example",
-  "author": "Filip Michalowski (@fmmm)",
-  "version": "0.0.0",
+  "author": {
+    "name": "Filip Michalowski",
+    "email": "me@filmic.eu",
+    "url": "http://filmic.eu"
+  },
+  "version": "0.0.1",
   "description": "Gulp.js example",
   "dependencies": {},
   "devDependencies": {
     "connect": "~2.12.0",
-    "gulp": "~3.3.1",
+    "gulp": "~3.4.1",
     "gulp-coffee": "~1.2.5",
     "gulp-concat": "~2.1.7",
     "gulp-livereload": "~0.2.0",
@@ -15,8 +19,8 @@
     "gulp-util": "~2.2.9",
     "tiny-lr": "~0.0.5"
   },
-  "repository" : {
-    "type" : "",
-    "url" : ""
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/filmic/gulpjs-example.git"
   }
 }
