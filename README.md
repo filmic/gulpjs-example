@@ -2,7 +2,7 @@
 
 * Install [LiveReload plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)  for Google Chrome and enable it
 
-* Run `gulp --require=gulp-coffee` to start Gulp.js build system.
+* Run `gulp --require coffee-script/register` to start Gulp.js build system.
 
 * Open page from [http://localhost:3000](http://localhost:3000) in Chrome
 
