@@ -30,6 +30,9 @@ gulp.task 'webserver', ->
 gulp.task 'livereload', ->
     server.listen 35729, (err) ->
         console.log err if err?
+        gulp.watch('scripts/coffee/**/*.coffee', ['scripts'])
+        gulp.watch('styles/scss/init.scss', ['styles'])
+        gulp.watch('*.html', ['html'])
 
 # Compiles CoffeeScript files into js file
 # and reloads the page
@@ -57,15 +60,5 @@ gulp.task 'html', ->
 
 # The default task
 gulp.task 'default', ->
-	gulp.run 'webserver', 'livereload', 'scripts', 'styles'
-
-	# Watches files for changes
-	gulp.watch 'scripts/coffee/**', ->
-		gulp.run 'scripts'
-
-	gulp.watch 'styles/scss/**', ->
-		gulp.run 'styles'
-
-	gulp.watch '*.html', ->
-		gulp.run 'html'
+    gulp.start 'webserver', 'livereload', 'scripts', 'styles'
 	
