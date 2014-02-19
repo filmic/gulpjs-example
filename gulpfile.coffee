@@ -55,17 +55,12 @@ gulp.task 'html', ->
 	gulp.src('*.html')
 		.pipe(refresh server)
 
+# Watches files for changes
+gulp.task 'watch', ->
+  gulp.watch 'scripts/coffee/**', ['scripts']
+  gulp.watch 'styles/scss/**', ['styles']
+  gulp.watch '*.html', ['html']
+
 # The default task
-gulp.task 'default', ->
-	gulp.run 'webserver', 'livereload', 'scripts', 'styles'
+gulp.task 'default', ['webserver', 'livereload', 'scripts', 'styles', 'watch']
 
-	# Watches files for changes
-	gulp.watch 'scripts/coffee/**', ->
-		gulp.run 'scripts'
-
-	gulp.watch 'styles/scss/**', ->
-		gulp.run 'styles'
-
-	gulp.watch '*.html', ->
-		gulp.run 'html'
-	
